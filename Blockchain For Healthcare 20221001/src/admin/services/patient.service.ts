@@ -29,11 +29,12 @@ export class PatientService {
     this.ipfs = ipfsService.getIPFS();
   }
 
-  addPatient(pat_id: any, data: any) {
+  /*addPatient(pat_id: any, data: any) {
     console.log("adding Patient");
     this.contract = this.blockchainService.getContract()
 
-    this.ipfs.addJSON(data).then((IPFSHash: any) => {
+    //this.ipfs.addJSON(data).then((IPFSHash: any) => {
+	this.ipfs.add(Buffer.from(JSON.stringify(data))).then((IPFSHash: any) => {
       console.log("IPFS hash : ",IPFSHash);
       this.contract.methods
         .addPatInfo(pat_id, IPFSHash)
@@ -52,6 +53,35 @@ export class PatientService {
           this.failed = true
         });
     });
+  }*/
+
+  //addDoctor(docId: string, data: any): Promise<any> {
+  addPatient(pat_id: any, data: any) {
+    return new Promise((resolve, reject) => {
+      this.blockchainService.getContract().then(c => {
+        this.blockchainService.getCurrentAcount().then(a => {
+          this.addRecord(data).then(ipfsHash => {
+            this.contract.methods
+              .addPatInfo(pat_id, ipfsHash)
+              .send({ from: a })
+              .on("confirmation", (result: any) => {
+                console.log('result', result);
+                if (result == 1) {
+                  resolve(result);
+                }
+                reject(false)
+              })
+              .catch((err: any) => {
+                reject(false)
+              });
+          })
+        })
+      })
+    })
+  }
+  async addRecord(data: any) {
+    let IPFShash = await (await (this.ipfs.add(Buffer.from(JSON.stringify(data))))).path
+    return IPFShash
   }
 
   getAcccount() {
