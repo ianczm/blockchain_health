@@ -4,11 +4,11 @@ import { DoctorService } from 'src/admin/services/doctor.service';
 
 
 @Component({
-  selector: 'doctor-add',
+  selector: 'patient-add',
   templateUrl: './add.component.html',
   styleUrls: ['./add.component.sass'],
 })
-export class AddComponent implements OnInit {
+export class PatientAddComponent implements OnInit {
   model: any = {
     docID: '',
     fName: 'test_name',

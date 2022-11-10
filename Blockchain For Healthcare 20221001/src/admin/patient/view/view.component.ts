@@ -4,17 +4,12 @@ import {
 } from '@angular/core';
 import { DoctorService } from 'src/admin/services/doctor.service';
 
-/*@Component({
-  selector: 'patient-view',
-  templateUrl: './patientview.component.html',
-  styleUrls: ['./patientview.component.sass'],
-})*/
 @Component({
-  selector: 'doctor-view',
+  selector: 'patient-view',
   templateUrl: './view.component.html',
   styleUrls: ['./view.component.sass'],
 })
-export class ViewComponent implements OnInit {
+export class PatientViewComponent implements OnInit {
   model: any = {
     acID: '',
   };
