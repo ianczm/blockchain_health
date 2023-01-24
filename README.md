@@ -21,6 +21,7 @@ ii. Google Chrome with Metamask
 7. Github Desktop
 
 # Installation
+0. Make sure you meet the prerequisites
 1. Open IPFS Desktop app and Change IPFS Settings
 
 a. Open your IPFS distribution
@@ -43,15 +44,18 @@ https://github.com/Nksheng/blockchainForHealthcare20221001
 
 3. Turn on Ganache and make sure your ehr project is running. Add the new repo to Ganache.
 4. Open your browser, and make sure MetaMask extension is logged in.
-5. go to metamask and renew the private key using ganache
-6. change 'ETH Admin' private key to the ganache first key
-7. save the work and connect the account with with localhost:4200
-(it wont work if you connect metamask with different tabs)
-8. open another cmd and type truffle migrate to activate contracts migrations and roles
-9. type truffle deploy
-10. Open cmd from this 'repo/Blockchain For Healthcare 20221001' folder, then type the cmd "yarn start"
-11. head back to localhost:4200 and click on admin
-12. here is the dashboard of EHR Project
+5. Go to metamask
+6. Add 'ETH Admin' account with ganache first private key
+7. Open cmd from this 'repo/Blockchain For Healthcare 20221001' folder
+8. Type yarn install
+9. Type yarn start
+10. After that, press Ctrl+C to stop the project.
+11. Check if Ganache still works properly. If has any issue, restart Ganache by following the dialog.
+12. Type truffle migrate to activate contracts migrations and roles
+13. Type truffle deploy
+14. Type yarn start
+15. In the browser, go to localhost:4200 and click on admin
+16. here is the dashboard of EHR Project
 
 # FAQ
 Q1: What if I want to open this project on Mac?
@@ -64,4 +68,8 @@ Due to a reported issue at github (https://github.com/shamil-t/ehr-blockchain/is
 
 Q3: Why the virtual machine need to access all CPUs?
 
-Node.js will not function properly and can produce error like assertion time error if not all CPUs are used. To solve the assertion time error, the virtual machine have to access all CPUs to run properly.
+Node.js will not function properly and can produce error like assertion time error if not all CPUs are used. To reduce the chance of the assertion time error, the virtual machine have to access all CPUs to run properly. Before a yarn command is run, make sure the clock is sync by checking FAQ Q4.
+
+Q4: Assertion failed when yarn install, what should I do?
+
+Go to Windows settings, Time & Language, Date & time. Then sync the time again by click Sync Now button under Synchronise the clock.
