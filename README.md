@@ -1,11 +1,12 @@
 # blockchainForHealthcare20221001
 
 # Prerequisite
-1. Windows 10 machine or virtual machine
+1. Windows 10 machine or virtual machine (Processors: All CPUs)
 2. Google Chrome
 3. Git
 4. Node.js
 5. Yarn (Use cmd to run this code to install: npm install --global yarn)
+5. Truffle (Use cmd to run this code to install: npm install -g truffle)
 5. Already following the videos in this playlist, from part 1 to part 7
 
 https://www.youtube.com/playlist?list=PL54V-i7zW55d1VKxEkp9DCPt5k_zE6m3X
@@ -20,7 +21,7 @@ ii. Google Chrome with Metamask
 7. Github Desktop
 
 # Installation
-1. Change IPFS Settings
+1. Open IPFS Desktop app and Change IPFS Settings
 
 a. Open your IPFS distribution
 
@@ -37,15 +38,18 @@ c. Copy and Paste the following code to HTTPHeaders in IPFS Config
 ]
 
 2. Use Github Desktop app to clone this repo into your github folder
-3. Turn on Ganache and make sure your ehr project is running
+
+https://github.com/Nksheng/blockchainForHealthcare20221001
+
+3. Turn on Ganache and make sure your ehr project is running. Add the new repo to Ganache.
 4. Open your browser, and make sure MetaMask extension is logged in.
-5. Open cmd from this 'repo/Blockchain For Healthcare 20221001' folder, then type the cmd "yarn start"
-6. go to metamask and renew the private key using ganache
-7. change 'ETH Admin' private key to the ganache first key
-8. save the work and connect the account with with localhost:4200
+5. go to metamask and renew the private key using ganache
+6. change 'ETH Admin' private key to the ganache first key
+7. save the work and connect the account with with localhost:4200
 (it wont work if you connect metamask with different tabs)
-9. open another cmd and type truffle migrate to activate contracts migrations and roles
-10. type truffle deploy
+8. open another cmd and type truffle migrate to activate contracts migrations and roles
+9. type truffle deploy
+10. Open cmd from this 'repo/Blockchain For Healthcare 20221001' folder, then type the cmd "yarn start"
 11. head back to localhost:4200 and click on admin
 12. here is the dashboard of EHR Project
 
@@ -57,3 +61,7 @@ Mac users can try to prepare a VirtualBox Windows 10 virtual machine or equivala
 Q2: Why I cannot add doctor?
 
 Due to a reported issue at github (https://github.com/shamil-t/ehr-blockchain/issues/15), a proper IPFS config is required to perform this feature properly. Check the installation section, step 1, to make sure your IPFS config ia set up correctly.
+
+Q3: Why the virtual machine need to access all CPUs?
+
+Node.js will not function properly and can produce error like assertion time error if not all CPUs are used. To solve the assertion time error, the virtual machine have to access all CPUs to run properly.
