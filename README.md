@@ -2,9 +2,10 @@
 
 # Prerequisite
 1. Windows 10 machine or virtual machine
-2. Git
-3. Node.js
-4. Already following the videos in this playlist, from part 1 to part 7
+2. Google Chrome
+3. Git
+4. Node.js
+5. Already following the videos in this playlist, from part 1 to part 7
 
 https://www.youtube.com/playlist?list=PL54V-i7zW55d1VKxEkp9DCPt5k_zE6m3X
 
@@ -14,8 +15,10 @@ i. Ganache
 
 ii. Google Chrome with Metamask
 
-5. IPFS Desktop
-6. Github Desktop
+iii. Yarn
+
+6. IPFS Desktop
+7. Github Desktop
 
 # Installation
 1. Change IPFS Settings
