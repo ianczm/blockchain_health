@@ -5,6 +5,7 @@
 2. Google Chrome
 3. Git
 4. Node.js
+5. Yarn (Use cmd to run this code to install: npm install --global yarn)
 5. Already following the videos in this playlist, from part 1 to part 7
 
 https://www.youtube.com/playlist?list=PL54V-i7zW55d1VKxEkp9DCPt5k_zE6m3X
@@ -14,8 +15,6 @@ After following the videos, your pc should already have:
 i. Ganache
 
 ii. Google Chrome with Metamask
-
-iii. Yarn
 
 6. IPFS Desktop
 7. Github Desktop
