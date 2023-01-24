@@ -5,10 +5,13 @@
 2. Git
 3. Node.js
 4. Already following the videos in this playlist, from part 1 to part 7
+
 https://www.youtube.com/playlist?list=PL54V-i7zW55d1VKxEkp9DCPt5k_zE6m3X
 
 After following the videos, your pc should already have:
+
 i. Ganache
+
 ii. Google Chrome with Metamask
 
 5. IPFS Desktop
@@ -18,7 +21,9 @@ ii. Google Chrome with Metamask
 1. Change IPFS Settings
 
 a. Open your IPFS distribution
+
 b. Go to settings (on your bottom left on your software)
+
 c. Copy and Paste the following code to HTTPHeaders in IPFS Config
 
 "Access-Control-Allow-Methods": [
