@@ -9,6 +9,13 @@ export const environment = {
 export const IPFS = {
   localIPFS: 'http://127.0.0.1:5001/api/v0',
   localIPFSGet: 'http://localhost:8080/ipfs/'
+  
+  //localIPFS: 'https://ipfs.infura.io:5001/api/v0',
+  //localIPFSGet: 'https://ipfs.infura.io:5001',
+  
+  /* host: 'k0lsbvt33u-k0zt24yesd-ipfs.kr0-aws.kaleido.io',
+  port: 5001,
+  protocol: 'https'*/
 }
 
 /*

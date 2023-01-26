@@ -29,8 +29,13 @@ contract Contract {
     address get_patient_id;
     address get_dr_id;
 
+	// address msgsender = 0x4c0e13C6F4fB72c97c954f76902d0bE2A2E9b36C;
+
     constructor() {
         admin_id = msg.sender;
+		
+		// admin_id = msgsender;
+		
         admin.add(admin_id);
     }
 
