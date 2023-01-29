@@ -20,7 +20,7 @@ ii. Google Chrome with Metamask
 6. IPFS Desktop
 7. Github Desktop
 
-# Installation
+# Installation (Youtube: https://www.youtube.com/watch?v=1NuScL3KPKQ)
 0. Make sure you meet the prerequisites
 1. Open IPFS Desktop app and Change IPFS Settings
 
