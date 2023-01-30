@@ -9,14 +9,9 @@ export const environment = {
 export const IPFS = {
   // localIPFS: 'http://127.0.0.1:5001/api/v0',
   // localIPFSGet: 'http://localhost:8080/ipfs/'
-
-  /*localIPFS: 'https://k0lsbvt33u-k0zt24yesd-ipfs.kr0-aws.kaleido.io/api/v0',
-  localIPFSGet: 'http://localhost:8080/ipfs/',
-  userID: 'k0vr6zqfvs',
-  key: 'qMprzA7K04sAV-Mum-UqjEHFIzwyZs_WPtQPwzu9_ig'*/
   
   localIPFS: 'https://ipfs.infura.io:5001/api/v0',
-  localIPFSGet: 'http://localhost:8080/ipfs/',
+  localIPFSGet: 'https://blockchainforhealthcare20221001.infura-ipfs.io/ipfs/',
   userID: '2GGQMjvAXPhoPiJ6w3wQ57vNVik',
   key: 'a0e263e94511a0357faf1d6a17eee177'
 
