@@ -15,7 +15,7 @@ module.exports = {
 	// Around 13:00 in the video
 	development: {
 		provider: () => {
-			const appCred = 'k0vr6zqfvs:qMprzA7K04sAV-Mum-UqjEHFIzwyZs_WPtQPwzu9_ig';
+			const appCred = 'k0vr6zqfvs:UDL9XgfEspKOh--9YQKXaIjLh0RLqpAtUbT-CECWYLk';
 			const connectionURL = 'k0lsbvt33u-k0t9jgdni3-rpc.kr0-aws.kaleido.io';
 			return new Web3.providers.HttpProvider('https://' + appCred + '@' + connectionURL + '', 100000);
 		},
@@ -23,6 +23,16 @@ module.exports = {
 		gasPrice: 0,
 		gas: 4500000,
 	},
+	/*development: {
+		provider: () => {
+			const appCred = 'user:password';
+			const connectionURL = 'abc-abc-rpc.kr0-aws.kaleido.io';
+			return new Web3.providers.HttpProvider('https://' + appCred + '@' + connectionURL + '', 100000);
+		},
+		network_id: "*",
+		gasPrice: 0,
+		gas: 4500000,
+	},*/
   },
 
   // Set default mocha options here, use special reporters etc.
