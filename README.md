@@ -4,7 +4,7 @@
 1. Windows 10 machine or virtual machine (Processors: All CPUs)
 2. Google Chrome
 3. Git
-4. Node.js
+4. Node.js v16.19.0 (Gallium)
 5. Yarn (Use cmd to run this code to install: npm install --global yarn)
 5. Truffle (Use cmd to run this code to install: npm install -g truffle)
 5. Already following the videos in this playlist, from part 1 to part 7
