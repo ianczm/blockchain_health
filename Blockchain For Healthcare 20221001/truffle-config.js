@@ -15,8 +15,8 @@ module.exports = {
 	// Around 13:00 in the video
 	development: {
 		provider: () => {
-			const appCred = 'k0vr6zqfvs:UDL9XgfEspKOh--9YQKXaIjLh0RLqpAtUbT-CECWYLk';
-			const connectionURL = 'k0lsbvt33u-k0t9jgdni3-rpc.kr0-aws.kaleido.io';
+			const appCred = 'k0kzrqf2l8:_qNgRzX4ZFTI-wTFI1PJgGPYSrLw5j0QUTfYLl8edww';
+			const connectionURL = 'k0o9r454ac-k0z6j58rqs-rpc.kr0-aws.kaleido.io';
 			return new Web3.providers.HttpProvider('https://' + appCred + '@' + connectionURL + '', 100000);
 		},
 		network_id: "*",
