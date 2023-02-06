@@ -4,6 +4,7 @@ import { IPFSHTTPClient } from 'ipfs-http-client/dist/src/types';
 import { IPFS } from 'src/environments/environment';
 import { BlockchainService } from 'src/services/blockchain.service';
 import { IpfsService } from 'src/services/ipfs.service';
+import { HttpHeaders } from '@angular/common/http';
 
 
 @Injectable({
@@ -67,7 +68,12 @@ export class DoctorService {
           .call()
           .then((ipfsHash: string) => {
             console.log(ipfsHash);
-            this.http.get(IPFS.localIPFSGet + ipfsHash)
+            //this.http.get(IPFS.localIPFSGet + ipfsHash)
+			this.http.get(IPFS.localIPFSGet + ipfsHash, {
+              headers: new HttpHeaders({
+                Authorization: 'Basic ' + btoa( IPFS.userID + ':' + IPFS.key ),
+              }),
+            })
               .subscribe((data: any) => {
                 console.log(data);
                 resolve(data);
