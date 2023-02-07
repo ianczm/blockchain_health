@@ -6,8 +6,8 @@
 3. Git
 4. Node.js v16.19.0 (Gallium)
 5. Yarn (Use cmd to run this code to install: npm install --global yarn)
-5. Truffle (Use cmd to run this code to install: npm install -g truffle)
-5. Already following the videos in this playlist, from part 1 to part 7
+6. Truffle (Use cmd to run this code to install: npm install -g truffle)
+7. Already following the videos in this playlist, from part 1 to part 7
 
 https://www.youtube.com/playlist?list=PL54V-i7zW55d1VKxEkp9DCPt5k_zE6m3X
 
@@ -17,8 +17,8 @@ i. Ganache
 
 ii. Google Chrome with Metamask
 
-6. IPFS Desktop
-7. Github Desktop
+8. IPFS Desktop
+9. Github Desktop
 
 # Installation (Youtube: https://www.youtube.com/watch?v=1NuScL3KPKQ&list=PLabxW4FrEKtqly4olEaLhT2P-4enaHh-9)
 0. Make sure you meet the prerequisites
