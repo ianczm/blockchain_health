@@ -2,7 +2,7 @@ import {
   Component,
   OnInit
 } from '@angular/core';
-import { PatientService } from 'src/admin/services/doctor.service';
+import { DoctorService } from 'src/admin/services/doctor.service';
 
 @Component({
   selector: 'patient-view',
@@ -39,10 +39,10 @@ export class PatientViewComponent implements OnInit {
   progressMsg: string = ''
 
 
-  constructor(private patientService: PatientService) {
+  constructor(private doctorService: DoctorService) {
     this.progressMsg = 'Loading Doctor Accounts From Blockchain'
 
-    this.DoctorDetails = patientService.DoctorDetails
+    this.DoctorDetails = doctorService.DoctorDetails
   }
 
   ngOnInit(): void {
@@ -54,7 +54,7 @@ export class PatientViewComponent implements OnInit {
     this.DoctorDetails = []
     for (var i = 0; i <= this.Doctors.length; i++) {
       if (this.Doctors[i])
-        this.patientService.getDoctorDetails(this.Doctors[i]).then((data: any) => {
+        this.doctorService.getDoctorDetails(this.Doctors[i]).then((data: any) => {
           this.DoctorDetails.push(data)
         });
     }
@@ -73,7 +73,7 @@ export class PatientViewComponent implements OnInit {
       return 0
     }
 
-    this.patientService.getDrs().then((docs: any) => {
+    this.doctorService.getDrs().then((docs: any) => {
       this.Doctors = docs
       if (this.Doctors.length >= 1) {
         this.loadDrDetails();

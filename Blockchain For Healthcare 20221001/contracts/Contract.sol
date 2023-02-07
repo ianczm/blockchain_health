@@ -2,6 +2,7 @@
 pragma solidity >=0.4.21;
 
 import "./Roles.sol";
+//import "../node_modules/hardhat/console.sol"; 
 
 contract Contract {
     using Roles for Roles.Role;
