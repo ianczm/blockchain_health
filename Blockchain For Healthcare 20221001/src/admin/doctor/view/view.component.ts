@@ -75,6 +75,7 @@ export class ViewComponent implements OnInit {
 
     this.doctorService.getDrs().then((docs: any) => {
       this.Doctors = docs
+	  console.log("From view.component.ts, Line 78");
 	  console.log(this.Doctors);
       if (this.Doctors.length >= 1) {
         this.loadDrDetails();
