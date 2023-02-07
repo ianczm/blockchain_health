@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IPFSHTTPClient } from 'ipfs-http-client/dist/src/types';
-import { DoctorService } from 'src/admin/services/doctor.service';
+import { PatientService } from 'src/admin/services/doctor.service';
 
 
 @Component({
@@ -35,7 +35,7 @@ export class PatientAddComponent implements OnInit {
   IPFShash: string = ''
 
   constructor(
-    private ds: DoctorService
+    private ds: PatientService
   ) {
     this.ipfs = ds.ipfs
   }
