@@ -56,12 +56,16 @@ contract Contract {
 
         Doctor storage drInfo = Doctors[msg.sender];
         drInfo.drHash = _drInfo_hash;
+
+        // When adding DrInfo, same msg.sender is pushed in Dr_ids, regardless of dr_id
+        // Tried changing to dr_id with same result so this might not be the problem
         Dr_ids.push(msg.sender);
 
         doctor.add(dr_id);
     }
 
     function getAllDrs() public view returns (address[] memory) {
+        // This will return the duplicate msg.sender items from addDrInfo
         return Dr_ids;
     }
 

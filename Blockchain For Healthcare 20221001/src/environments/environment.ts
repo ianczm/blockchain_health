@@ -8,8 +8,8 @@ export const environment = {
 
 export const IPFS = {
   localIPFS: 'http://127.0.0.1:5001/api/v0',
-  localIPFSGet: 'http://localhost:8080/ipfs/'
-}
+  localIPFSGet: 'http://127.0.0.1:8080/ipfs/',
+};
 
 /*
  * For easier debugging in development mode, you can import the following file
