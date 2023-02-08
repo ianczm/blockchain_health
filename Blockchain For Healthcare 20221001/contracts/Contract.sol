@@ -51,6 +51,11 @@ contract Contract {
         doctor.add(_newdr);
     }
 
+    function addPatient(address _newdr) public {
+        require(admin.has(msg.sender), "Only For Admin");
+        patient.add(_newdr);
+    }
+
     // dr_id is not the account ids!!
     // dr_id is not needed here and should not be required during creation
     // dr_id is an address that should be automatically generated when the dr is first saved
@@ -65,13 +70,33 @@ contract Contract {
         doctor.add(dr_id);
     }
 
+    function addPatientInfo(address pat_id, string memory _patInfo_hash) public {
+        require(admin.has(msg.sender), "Only For Admin");
+
+        Patient storage patInfo = Patients[pat_id];
+        patInfo.patHash = _patInfo_hash;
+
+        // The new address (dr_id) should be pushed into Dr_ids storage to retrieve the doctors back
+        Patient_ids.push(pat_id);
+        patient.add(pat_id);
+    }
+
     function getAllDrs() public view returns (address[] memory) {
         // This will return the addresses pointing to the doctors
         return Dr_ids;
     }
 
+    function getAllPatientIds() public view returns (address[] memory) {
+        // This will return the addresses pointing to the doctors
+        return Patient_ids;
+    }
+
     function getDr(address _id) public view returns (string memory) {
         return (Doctors[_id].drHash);
+    }
+
+    function getPatient(address _id) public view returns (string memory) {
+        return (Patients[_id].patHash);
     }
 
     // check is Doctor
