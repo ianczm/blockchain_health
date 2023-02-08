@@ -56,7 +56,6 @@ contract Contract {
         patient.add(_newdr);
     }
 
-    // dr_id is not the account ids!!
     // dr_id is not needed here and should not be required during creation
     // dr_id is an address that should be automatically generated when the dr is first saved
     function addDrInfo(address dr_id, string memory _drInfo_hash) public {
