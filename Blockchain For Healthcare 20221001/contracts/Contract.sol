@@ -51,21 +51,22 @@ contract Contract {
         doctor.add(_newdr);
     }
 
+    // dr_id is not the account ids!!
+    // dr_id is not needed here and should not be required during creation
+    // dr_id is an address that should be automatically generated when the dr is first saved
     function addDrInfo(address dr_id, string memory _drInfo_hash) public {
         require(admin.has(msg.sender), "Only For Admin");
 
-        Doctor storage drInfo = Doctors[msg.sender];
+        Doctor storage drInfo = Doctors[dr_id];
         drInfo.drHash = _drInfo_hash;
 
-        // When adding DrInfo, same msg.sender is pushed in Dr_ids, regardless of dr_id
-        // Tried changing to dr_id with same result so this might not be the problem
-        Dr_ids.push(msg.sender);
-
+        // The new address (dr_id) should be pushed into Dr_ids storage to retrieve the doctors back
+        Dr_ids.push(dr_id);
         doctor.add(dr_id);
     }
 
     function getAllDrs() public view returns (address[] memory) {
-        // This will return the duplicate msg.sender items from addDrInfo
+        // This will return the addresses pointing to the doctors
         return Dr_ids;
     }
 
